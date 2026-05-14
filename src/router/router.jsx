@@ -1,7 +1,7 @@
 import { Navigate, createBrowserRouter } from "react-router-dom"
 import Homepage from "../pages/homepage/Homepage"
-import Produtos from "../components/produtos/Produtos"
-import ProdutoDetalhe from "../components/produtos/ProdutoDetalhe"
+import Produtos from "../components/produtosLista/ProdutosLista"
+import ProdutoDetalhe from "../components/detalhe/ProdutoDetalhe"
 import { LoginPage } from "../pages/loginPage/LoginPage"
 import { RegisterPage } from "../pages/registerPage/RegisterPage"
 
