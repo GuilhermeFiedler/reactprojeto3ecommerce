@@ -35,5 +35,21 @@
       "username": "oiii200",
       "id": 6
     }
-  ]
+  ],
+  "products": [{
+    "title": "Tênis Adidas",
+    "image": "",
+    "price": 45.9,
+    "id": 1
+  },{
+    "title": "Tênis Nike",
+    "image": "",
+    "price": 23.99,
+    "id": 2
+  },{
+    "title": "Camiseta Adidas",
+    "image": "",
+    "price": 9.14,
+    "id": 3
+  }]
 }
