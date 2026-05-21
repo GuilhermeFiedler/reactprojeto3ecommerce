@@ -2,6 +2,8 @@ import { useNavigate } from "react-router-dom";
 import Button from "../../components/Button/Button";
 import useAuth from "../../hook/useAuth";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import styles from "./RegisterPage.module.css"
 
 export function RegisterPage() {
   const { register, loading } = useAuth();
@@ -19,14 +21,14 @@ export function RegisterPage() {
       await register(username, email, password);
       alert("Usuário cadastrado");
 
-      navigate("/home")
+      navigate("/login")
     } catch (err) {
-      alert(err.message)
+      alert("Credenciais inválidas, tente novamente.")
     }
   }
 
   return (
-    <form className="RegisterPage" onSubmit={handleSubmit}>
+    <form className={styles.RegisterPage} onSubmit={handleSubmit}>
       <div>
         <label>Nome de usuário</label>
         <input
@@ -54,8 +56,8 @@ export function RegisterPage() {
         />
       </div>
       <div>
-        <Button type="cancel" onClick={() => {navigate("/home")}}>Cancelar</Button>
-        <Button type="register">{loading ? "Cadastrando..." : "Cadastrar-se"}</Button>
+        <Link className="register-link" to="/home">Cancelar</Link>
+        <Button variant="register" type="submit">{loading ? "Cadastrando..." : "Cadastrar-se"}</Button>
       </div>
     </form>
   );

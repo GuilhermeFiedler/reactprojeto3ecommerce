@@ -12,8 +12,7 @@ export default function CartProvider({ children }) {
 
   const {
     mutate,
-    loading: addLoading,
-    error: addError,
+    loading: addLoading
   } = useMutation(async (product) => {
 
     if (!userId) throw new Error("Usuário não autenticado");
@@ -113,7 +112,7 @@ export default function CartProvider({ children }) {
 
   return (
     <CartContext.Provider
-      value={{ cartProducts, addToCart, deleteFromCart, addLoading, updateCartProduct, updateLoading, deleteLoading, addError, total }}
+      value={{ cartProducts, addToCart, deleteFromCart, addLoading, updateCartProduct, updateLoading, deleteLoading, total }}
     >
       {children}
     </CartContext.Provider>
